@@ -1,0 +1,65 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<title>Survey Feedbacks</title>
+	<style>
+		h1{
+			margin-left:  5%;
+		}
+		table{
+			margin : auto;
+		}
+		th{
+			text-align:left;
+		}
+		.options{
+			width: 50%;
+			margin-left: 5%;
+		}
+		a{
+			margin-left:  5%;
+			text-decoration: none;
+		}
+		.integration{
+			display:none;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Customer Survey Answers</h1>
+	<hr>
+	<div class="options">
+	<label>Choose Topic : </label>
+	<select id="selectTopic">
+		<option 
+			th:each="data : ${topicNames}"
+			th:value="${data}"
+			th:text="${data}"
+		/>
+	</select>
+	</div>
+	<br>
+	<br>
+	<table  width="550">
+		<thead>
+		<tr>
+			<th>SubmitId</th>
+			<th>Score</th>
+			<th>FeedBack</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="data : ${dataBrands}">
+			<td th:text="${data.submitId}" class="first"/>
+			<td th:text="${data.score}" class="second"/>
+			<td th:text="${data.feedBack}" class="thirth"/>
+			<td th:text="${data.topic}" class="integration" />
+		<tr>
+		</tbody>
+	</table>
+	<br><br>
+	<a th:href="@{/home}">Go Home Page</a>
+	<script th:src="@{/js/feedBack.js}"></script>
+</body>
+</html>

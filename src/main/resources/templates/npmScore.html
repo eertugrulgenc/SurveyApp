@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<title>NpmScorePage</title>
+	<style>
+		h1{
+			margin-left:  5%;
+		}
+		#container{
+		 width: 35%;
+		 margin:auto;
+		 height: 30vh;
+		}
+		table{
+			width: 30%;
+		 	float:left;
+		}
+		th{
+			text-align:left;
+		}
+		a{
+			margin-left:  5%;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Survey Npm Scores</h1>
+	<hr>	<br><br>
+		<div id="container">
+			<table>
+				<tr><th>TopicId<th></tr>
+				<tr th:each="topId:${topicId}">
+				<td th:text="${topId}"><td></tr>
+			</table>
+			<table>
+				<tr><th>Topic<th></tr>
+				<tr th:each="tp:${topicNames}">
+				<td th:text="${tp}"><td></tr>
+			</table>
+			<table>
+				<tr><th>NpmScore<th></tr>
+				<tr th:each="np:${npmScores}">
+				<td th:text="${np}"><td></tr>
+			</table>
+		</div>
+	<br><br>
+	<a th:href="@{/home}">Go Home Page</a>
+</body>
+</html>

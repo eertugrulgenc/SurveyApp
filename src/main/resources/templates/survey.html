@@ -1,0 +1,57 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<title>Create Survey</title>
+	<style type="text/css">
+	h1{
+		margin-left:  5%;
+	}
+	form{
+		width: 50%;
+		
+		margin-left:  5%;
+		height: 42.5vh;
+	}
+	a{
+		margin-left:  5%;
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+	<h1>Create Survey</h1>	
+	<hr>
+	<form th:action="@{/createSurvey}" method="POST" 
+								th:object="${brands}">
+	<label>Select a topic for survey : </label>
+
+	<select th:field="*{topic}" id="selectTopic">
+		<option th:each="b : ${brandsData}" 
+				th:value="${b}"
+				th:text="${b}" >
+	</select>
+	<br><br>
+	<label>How likely are you recommend <span id="topicShow">Groove</span> to a friend or colleague?</label>
+	<br>
+	<input type="radio" th:field="*{score}" value="0" />0
+	<input type="radio" th:field="*{score}" value="1" />1
+	<input type="radio" th:field="*{score}" value="2" />2
+	<input type="radio" th:field="*{score}" value="3" />3
+	<input type="radio" th:field="*{score}" value="4" />4
+	<input type="radio" th:field="*{score}" value="5" />5
+	<input type="radio" th:field="*{score}" value="6" />6
+	<input type="radio" th:field="*{score}" value="7" />7
+	<input type="radio" th:field="*{score}" value="8" />8
+	<input type="radio" th:field="*{score}" value="9" />9
+	<input type="radio" th:field="*{score}" value="10" />10
+	<br><br>
+	<label>What is the most important reason for your score?</label>
+	<br>
+	<textarea rows="5" cols="25" th:field="*{feedBack}"></textarea>
+	<br><br>
+	<button type="submit">Submit Survey</button>
+	</form>
+	<a th:href="@{/home}">Go Home Page</a>
+	<script th:src="@{/js/survey.js}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<title>HomePage</title>
+	<style type="text/css">
+	.container{
+		width: 50%;
+		
+		margin:auto;
+		height: 50vh;
+	}
+	a{
+	display: flex;
+		justify-content: center;
+	}
+	</style>
+</head>
+<body>
+	<h1 style="text-align:center; color:grey">Welcome Survey App</h1>
+	<hr>
+	<br><br>
+	<div class="container">
+		
+		<br>
+		<a th:href="@{/home/showSurveyPage}">Create Survey</a>
+		<br>
+		<a th:href="@{/home/showFeedPage}">Get Feedback</a>
+		<br>
+		<a th:href="@{/home/showNpmScorePage}">Get Topic Score</a>
+	</div>
+	
+				
+	
+</body>
+</html>
