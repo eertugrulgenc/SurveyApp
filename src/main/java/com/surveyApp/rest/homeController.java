@@ -21,14 +21,7 @@ public class homeController {
 	public homeController(BrandsService brandsService) {
 		this.brandsService = brandsService;
 	}
-	/*
-	@GetMapping("/home")
-	public String goHome(Model model) {
-		List<Brands> brands = brandsService.getBrands();
-		model.addAttribute("brands",brands);
-		return "home";
-	}
-	*/
+	
 	@GetMapping("/home")
 	public ModelAndView goHome() {
 		List<Brands> brands = brandsService.getBrands();
