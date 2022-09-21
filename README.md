@@ -13,3 +13,6 @@ Within the entity structure, there is a class suitable for the structure of the 
 Interaction with the data in the database is provided within the DAO structure. 
 Then, these processes are transferred to the service layer and then to the controller layer with dependency injection. 
 Controller classes interact with html pages in the project.
+![image](https://user-images.githubusercontent.com/92019492/191540152-cca98e5b-be02-46f7-b2b0-feaca8620eae.png)
+![image](https://user-images.githubusercontent.com/92019492/191540283-6b944022-c5d6-4db1-ae27-2c0dfec59a91.png)
+![image](https://user-images.githubusercontent.com/92019492/191540361-1d11c175-56dd-4e20-a78e-ba035687892b.png)
