@@ -9,8 +9,7 @@ The structure of the project was created using the mvc design pattern.
 It has a double layer structure. 
 Since it is a double layer, access is provided through a service layer instead of directly accessing the class we call data access objects. 
 Thus, our project becomes more secure. 
-Within the entity structure, there is a class suitable for the structure of the tables we created in the database and an enum class where the names of the brands are kept. 
-Interaction with the data in the database is provided within the DAO structure. 
+Within the entity structure, there is a class suitable for the structure of the tables we created in the database and an enum class where the names of the brands are kept. Interaction with the data in the database is provided within the DAO structure. 
 Then, these processes are transferred to the service layer and then to the controller layer with dependency injection. 
 Controller classes interact with html pages in the project.
 ![image](https://user-images.githubusercontent.com/92019492/191540152-cca98e5b-be02-46f7-b2b0-feaca8620eae.png)
